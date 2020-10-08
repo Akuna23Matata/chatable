@@ -2,7 +2,7 @@ import socket
 
  
 
-msgFromClient       = "100"
+msgFromClient       = "0DAMIT 0"
 
 bytesToSend         = str.encode(msgFromClient)
 
@@ -28,6 +28,6 @@ msgFromServer = UDPClientSocket.recvfrom(bufferSize)
 
  
 
-msg = "Message from Server {}".format(msgFromServer[0])
+msg = "Message from Server "+msgFromServer[0].decode("UTF-8")
 
 print(msg)
